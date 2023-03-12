@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Girilen üç sayının en büyüğünü bulur</h1>
+    <button onclick="myFunction()">En büyük için tıkla</button>
+    <script>
+        function myFunction() {
+            let a = prompt("Lütfen ilk sayı giriniz");
+            let b = prompt("Lütfen ikinci sayı giriniz");
+            let c = prompt("Lütfen üçüncü sayı giriniz");
+            if (a > b) {
+                if (a > c) {
+                    console.log('En büyük sayı : ' + a);
+                } else {
+                console.log('En büyük sayı : ' + c);
+                }
+            } else {
+                if (b > c) {
+                    console.log('En büyük sayı : ' + b);
+                } else {
+                    console.log('en büyük sayı : '+ c);
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

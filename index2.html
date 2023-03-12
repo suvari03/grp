@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Vize final hesaplama</title>
+    <style>
+        .syf {
+            display: flex;
+            justify-content: center;
+            
+           
+        }
+
+        .syf1 {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syf">
+        <div class="syf1">
+            <h1>Not hesaplama</h1>
+            <label for="">Lütfen vize notunu giriniz :</label>
+            <input type="text" id="vize"> <br><br>
+            <label for="">Lütfen final notunu giriniz :</label>
+            <input type="text" id="final"> <br><br>
+            <label for="">Lütfen proje notunu giriniz :</label>
+            <input type="text" id="proje"> <br><br>
+            <button onclick="myFunction()">Hesapla</button>
+            <p>Öğrencinin notu : </p>
+            <p id="demo"></p>
+        </div>
+    </div>
+    <script>
+        
+        function myFunction(){
+        let vize = document.getElementById('vize').value;
+        let final = document.getElementById('final').value;
+        let proje = document.getElementById('proje').value;
+        
+        vize = vize * 0.3;
+        final = final * 0.5;
+        proje = proje * 0.2;
+
+        let ynot = vize + final + proje;
+        console.log(ynot);
+        if ( ynot < 40 ){
+            document.getElementById("demo").innerHTML = 'FF';
+        } else if ( ynot < 50 ){
+            document.getElementById("demo").innerHTML = 'DD';
+        } else if ( ynot < 70 ){
+            document.getElementById("demo").innerHTML = 'CC';
+        } else if ( ynot < 85 ){
+            document.getElementById("demo").innerHTML = 'BB';
+        } else {
+            document.getElementById("demo").innerHTML = 'AA';
+        }
+            
+            
+        }
+        
+        
+    </script>
+</body>
+
+</html>
